@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">BAND</a>
+            <a href="#">TOUR</a>
+            <a href="#">CONTACT</a>
+            <a href="#"><i class="fa fa-search"></i></a> 
+
+        </nav>
+            
+        </div>
+        <main>
+            <div class="mySlides">
+                <img src="https://www.w3schools.com/w3images/chicago.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="https://www.w3schools.com/w3images/la.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="https://www.w3schools.com/w3images/ny.jpg">
+            </div>
+
+        </main>
+        <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 4000);    
+        }
+        </script>
+    </body>
+</html>
