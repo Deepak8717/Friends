@@ -1,38 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <nav>
-            <a href="#">HOME</a>
-            <a href="#">BAND</a>
-            <a href="#">TOUR</a>
-            <a href="#">CONTACT</a>
-            <a href="#" class="right"><i class="fa fa-search"></i></a> 
+<!DOCUMENT <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bill W - Tribute page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+    
+    var quotes =['"In God\'s economy, nothing is wasted. Through failure, we learn a lesson in humility which is probably needed, painful though it is." - Bill W.',
+        '"Honesty with ourselves & others gets us sober, but it is tolerance that keeps us that way."- Bill W.',
+    '"Indecision with the passing of time becomes decision." - Bill W.',
+    '"True ambition is not what we thought it was. True ambition is the profound desire to live usefully and walk humbly under the grace of God." - Bill W.',
+    '"No personal calamity is so crushing that something true and great can\'t be made of it" - Bill W.',
+    '"The temporary good is enemy to the permanent best." - Bill W.',
+    '"Perhaps one of the greatest rewards of meditation and prayer is the sense of belonging that comes to us." - Bill W.',
+    '"In the wake of my spiritual experience there came a vision of a society of alcoholics." - Bill W.',
+    '"What you love and what you hate reveal what you are." - Dr. Bob',
+    '"Do not ask God to give you a light burden; ask Him to give you strong shoulders to carry a heavy burden." - Dr. Bob',
+    '"If you had something wrong with you, that’s what you talked about; you didn’t talk about sports or politics." - Dr. Bob and the Good Old Timers'
 
-        </nav>
+	];
+
+	
+	
+		
+
+	function getQuotes(){
+		var randomeNumber = Math.floor(Math.random()*(quotes.length));
+        document.getElementById("quotes").innerHTML = quotes[randomeNumber];
         
+       
+		
+	}
+	var myVar;
+
+function myFunction() {
+	getQuotes();
+    myVar = setInterval(getQuotes, 5500);
+}
+	
+    </script>
+</head>
+<body onload="myFunction()">
+    <main class="container">
+        <div class="hero">
+            <h1>Bill W. &amp; Dr. Bob</h1>
+            <h3>Alcoholics those lived to help and helped to live</h3>
+                <img class="img" src="./img/dr-bob-bill-w.jpg">
+                <blockquote id="quotes"></blockquote>
+        </div>
             
-        
-        
-        <script>
-        var myIndex = 0;
-        carousel();
-        
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}    
-            x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 4000);    
-        }
-        </script>
-    </body>
+            <div class="timeline">
+                <h3>Here's a Timeline of Bill W.'s life </h3>
+                <ul>
+                    <li>
+                        <strong>1895 - </strong> Born in East Dorset, Vermont.
+                    </li>
+                    <li>
+                        <strong>1913 - </strong> Bill met his wife Lois Burnham during the summer of 1913, while sailing on Vermont's Emerald Lake.
+                    </li>
+                    <li>
+                        <strong>1918 - </strong>Married Lois on January 24, 1918, just before he left to serve in World War I as a 2nd Lieutenant in the Coast Artillery.
+                    </li>
+                </ul>
+            </div>
+
+               
+                
+                
+    </main>
+</body>
 </html>

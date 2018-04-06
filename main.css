@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ek Mukta', sans-serif;
+}
+
+.container {
+        padding:25px;
+        font-size: 16px;
+        margin: 15px auto;
+        background-color: #D3D3D3;
+        
+      }
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+        
+ }
+ .hero{
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* border: 1px solid black; */
+ }
+ .img{
+     max-width: 100%;
+    
+ }
+ blockquote{
+  font-style:italic;
+ }
+
+ .timeline{
+   width: 800px;
+   margin: 0 auto;
+   /* border: 1px solid black; */
+   
+ }
+ @media only screen and (max-width: 479px){
+  .timeline { width: 100%; }
+}
+.timeline ul li{
+  padding-bottom: 10px;
+
+}
+  
